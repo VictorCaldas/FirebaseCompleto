@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:background="#FFF">
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:layout_width="match_parent">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
+            android:layout_marginTop="10dp"
+            android:hint="E-mail"
+            android:id="@+id/email_register" />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:layout_width="match_parent">
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:ems="10"
+            android:layout_marginTop="10dp"
+            android:id="@+id/password_register"
+            android:hint="password" />
+    </android.support.design.widget.TextInputLayout>
+
+    <Button
+        android:text="Criar conta"
+        android:layout_width="130dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:textColor="#FFFF"
+        android:id="@+id/button_register"
+        android:background="@color/colorAccent"/>
+
+    <Button
+        android:text="Logar"
+        android:layout_width="130dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:textColor="#FFFF"
+        android:id="@+id/button_login"
+        android:background="@color/colorPrimary"/>
+
+    <Button
+        android:text="Usar conta do Google"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:id="@+id/account_google_login"
+        android:background="@null"
+        android:textColor="@color/colorAccent"
+        android:layout_marginBottom="10dp" />
+</LinearLayout>

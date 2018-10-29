@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:background="#FFF">
+
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:layout_width="match_parent">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
+            android:layout_marginTop="10dp"
+            android:hint="E-Mail"
+            android:id="@+id/email_forgot" />
+
+    </android.support.design.widget.TextInputLayout>
+
+    <Button
+        android:text="Submit New Password Link"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="100dp"
+        android:textColor="#FFFF"
+        android:id="@+id/new_password_forgot"
+        android:background="@color/colorAccent"/>
+
+</LinearLayout>
