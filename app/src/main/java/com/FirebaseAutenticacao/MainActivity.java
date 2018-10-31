@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
         };
 
         final FirebaseUser user  = firebaseAuth.getCurrentUser();
-        textView.setText("oiiii " + user.getEmail());
+        textView.setText("bom dia gato " + user.getEmail());
 
         btnDeleteUser.setOnClickListener(new View.OnClickListener() {
             @Override

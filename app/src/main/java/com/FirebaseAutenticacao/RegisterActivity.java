@@ -30,6 +30,7 @@ public class RegisterActivity extends AppCompatActivity {
         registerButton = (Button) findViewById(R.id.button_register);
         loginButtonGoogle = (Button) findViewById(R.id.account_google_login);
         button_login =(Button) findViewById(R.id.button_login);
+
         firebaseAuth = FirebaseAuth.getInstance();
 
         registerButton.setOnClickListener(new View.OnClickListener() {
