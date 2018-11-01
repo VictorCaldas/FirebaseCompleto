@@ -5,11 +5,19 @@ buildscript {
     repositories {
         google()
         jcenter()
+
+        // Add repository
+        maven {
+            url 'https://maven.fabric.io/public'
+        }
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:3.2.1'
         //ADICIONA  O CLASSPATH DO GOOGLE seu lindo
-        classpath 'com.google.gms:google-services:4.0.1'
+        classpath 'com.google.gms:google-services:4.2.0'
+
+        // Add dependency
+        classpath 'io.fabric.tools:gradle:1.25.4' // esse aqui jovens
 
 
 

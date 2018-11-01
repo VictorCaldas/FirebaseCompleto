@@ -45,10 +45,12 @@ public class RegisterActivity extends AppCompatActivity {
                 }
                 if(TextUtils.isEmpty(password_value)){
                     Toast.makeText(getApplicationContext(),"Please fill in the required fields",Toast.LENGTH_SHORT).show();
+                    return;
                 }
 
                 if(password_value.length() < 6){
                     Toast.makeText(getApplicationContext(),"Password must be at least 6 characters",Toast.LENGTH_SHORT).show();
+                    return;
                 }
 
 

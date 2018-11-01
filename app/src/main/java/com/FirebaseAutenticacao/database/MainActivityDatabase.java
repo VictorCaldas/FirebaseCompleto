@@ -10,11 +10,13 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import com.FirebaseAutenticacao.R;
+import com.crashlytics.android.Crashlytics;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+
 
 public class MainActivityDatabase extends AppCompatActivity {
 
@@ -31,6 +33,7 @@ public class MainActivityDatabase extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_database);
+
 
         // Displaying toolbar icon
         getSupportActionBar().setDisplayShowHomeEnabled(true);
@@ -74,6 +77,7 @@ public class MainActivityDatabase extends AppCompatActivity {
             public void onClick(View view) {
                 String name = inputName.getText().toString();
                 String email = inputEmail.getText().toString();
+                Crashlytics.getInstance().crash(); // Force a crash
 
                 // Check for already existed userId
                 if (TextUtils.isEmpty(userId)) {
