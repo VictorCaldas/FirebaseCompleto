@@ -14,7 +14,6 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 
-
 public class NewPassActivity extends AppCompatActivity {
     EditText email;
     Button btnNewPass;
@@ -37,6 +36,7 @@ public class NewPassActivity extends AppCompatActivity {
                     Toast.makeText(getApplicationContext(),"Please fill e-mail",Toast.LENGTH_SHORT).show();
                     return;
                 }
+
 
                 firebaseAuth.sendPasswordResetEmail(email_value)
                         .addOnCompleteListener(new OnCompleteListener<Void>() {

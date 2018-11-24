@@ -33,9 +33,12 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".LoginActivity"></activity>
+        <activity android:name=".LoginActivity">
+        </activity>
         <activity android:name=".NewPassActivity"></activity>
-        <activity android:name=".RegisterActivity"></activity>
+        <activity android:name=".RegisterActivity">
+
+        </activity>
 
         <service android:name=".service.MyFirebaseMessagingService">
             <intent-filter>

@@ -32,10 +32,25 @@ dependencies {
     //ADICIONA AS BIBLIOTECAS DO FIREBASE
     implementation 'com.google.firebase:firebase-auth:16.0.5'//agora o foco é aqui
     implementation 'com.google.android.gms:play-services-auth:16.0.1'//agora o foco é aqui
-    implementation 'com.google.firebase:firebase-core:16.0.4'
+    implementation 'com.google.firebase:firebase-core:16.0.5'
 
-    implementation 'com.google.firebase:firebase-database:16.0.4'
-    implementation 'com.google.firebase:firebase-storage:16.0.4'
+
+    implementation 'com.google.firebase:firebase-database:16.0.5'
+    implementation 'com.google.firebase:firebase-storage:16.0.5'
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     // Add dependency
 

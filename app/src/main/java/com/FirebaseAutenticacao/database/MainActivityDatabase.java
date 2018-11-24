@@ -77,7 +77,6 @@ public class MainActivityDatabase extends AppCompatActivity {
             public void onClick(View view) {
                 String name = inputName.getText().toString();
                 String email = inputEmail.getText().toString();
-                Crashlytics.getInstance().crash(); // Force a crash
 
                 // Check for already existed userId
                 if (TextUtils.isEmpty(userId)) {
