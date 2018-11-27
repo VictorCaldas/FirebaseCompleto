@@ -44,13 +44,15 @@ public class MainActivityDatabase extends AppCompatActivity {
         inputEmail = (EditText) findViewById(R.id.email);
         btnSave = (Button) findViewById(R.id.btn_save);
 
+
         mFirebaseInstance = FirebaseDatabase.getInstance();
 
         // get reference to 'users' node
         mFirebaseDatabase = mFirebaseInstance.getReference("users");
 
+        // Aqui meu jovens lindos!
         // store app title to 'app_title' node
-        mFirebaseInstance.getReference("app_title").setValue("Realtime Database");
+        mFirebaseInstance.getReference("app_title").setValue("Tairo Lindo");
 
         // app_title change listener
         mFirebaseInstance.getReference("app_title").addValueEventListener(new ValueEventListener() {
