@@ -18,24 +18,42 @@
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
 
-
-        <activity android:name=".MainActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-            </intent-filter>
-        </activity>
-
-        <activity android:name=".database.MainActivityDatabase">
+        <!-- TELA PRINCIPAL AUTH -->
+        <activity android:name=".auth.RegisterActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
+
             </intent-filter>
         </activity>
 
-        <activity android:name=".LoginActivity"></activity>
-        <activity android:name=".NewPassActivity"></activity>
-        <activity android:name=".RegisterActivity"></activity>
+        <activity android:name=".auth.LoginActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".auth.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".auth.NewPassActivity"></activity>
+
+
+        <!-- TELA PRINCIPAL DATABASE -->
+        <activity android:name=".database.MainActivityDatabase">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+            </intent-filter>
+        </activity>
+
+
+        <!-- TELA PRINCIPAL PUSH -->
 
         <service android:name=".service.MyFirebaseMessagingService">
             <intent-filter>

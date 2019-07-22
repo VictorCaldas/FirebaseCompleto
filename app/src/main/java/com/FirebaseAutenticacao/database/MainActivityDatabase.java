@@ -1,7 +1,7 @@
 package com.FirebaseAutenticacao.database;
 
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
+
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
@@ -9,8 +9,9 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.FirebaseAutenticacao.R;
-import com.crashlytics.android.Crashlytics;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -77,7 +78,6 @@ public class MainActivityDatabase extends AppCompatActivity {
             public void onClick(View view) {
                 String name = inputName.getText().toString();
                 String email = inputEmail.getText().toString();
-                Crashlytics.getInstance().crash(); // Force a crash
 
                 // Check for already existed userId
                 if (TextUtils.isEmpty(userId)) {

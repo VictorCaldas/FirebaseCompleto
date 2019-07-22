@@ -5,8 +5,7 @@
     android:gravity="center"
     android:background="#FFF">
 
-
-    <android.support.design.widget.TextInputLayout
+    <com.google.android.material.textfield.TextInputLayout
         android:layout_height="wrap_content"
         android:padding="16dp"
         android:layout_width="match_parent">
@@ -18,8 +17,7 @@
             android:layout_marginTop="10dp"
             android:hint="E-Mail"
             android:id="@+id/email_forgot" />
-
-    </android.support.design.widget.TextInputLayout>
+    </com.google.android.material.textfield.TextInputLayout>
 
     <Button
         android:text="Submit New Password Link"
@@ -29,5 +27,4 @@
         android:textColor="#FFFF"
         android:id="@+id/new_password_forgot"
         android:background="@color/colorAccent"/>
-
 </LinearLayout>

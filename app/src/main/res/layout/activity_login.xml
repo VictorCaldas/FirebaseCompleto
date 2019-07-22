@@ -13,8 +13,7 @@
         android:id="@+id/forget_password"
         android:background="@null"
         android:textColor="@color/colorPrimary"
-        android:layout_marginBottom="8dp"
-        />
+        android:layout_marginBottom="8dp" />
 
     <TextView
         android:layout_width="match_parent"
@@ -29,9 +28,6 @@
         android:id="@+id/sign_in_button"
         android:layout_width="300dp"
         android:layout_height="55dp"
-        android:layout_marginTop="15dp"
-        />
-
-
+        android:layout_marginTop="15dp" />
 
 </LinearLayout>

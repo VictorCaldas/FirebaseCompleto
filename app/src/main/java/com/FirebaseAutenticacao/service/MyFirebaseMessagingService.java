@@ -10,7 +10,9 @@ import android.graphics.Color;
 import android.media.RingtoneManager;
 import android.net.Uri;
 import android.os.Build;
-import android.support.v4.app.NotificationCompat;
+
+
+import androidx.core.app.NotificationCompat;
 
 import com.FirebaseAutenticacao.R;
 import com.FirebaseAutenticacao.database.MainActivityDatabase;
@@ -56,8 +58,8 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
                 .setWhen(System.currentTimeMillis())
                 .setTicker("Hearty365")
                 //     .setPriority(Notification.PRIORITY_MAX)
-                .setContentTitle("Default notification")
-                .setContentText("Lorem ipsum dolor sit amet, consectetur adipiscing elit.")
+                .setContentTitle("MrTinder seu Lindo")
+                .setContentText(message)
                 .setContentInfo("Info")
                 .setSmallIcon(R.mipmap.ic_launcher);
 
