@@ -27,7 +27,7 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".auth.LoginActivity">
+        <activity android:name=".auth.GoogleLoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -41,7 +41,7 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".auth.NewPassActivity"></activity>
+        <activity android:name=".auth.ForgetPasswordActivity"></activity>
 
 
         <!-- TELA PRINCIPAL DATABASE -->

@@ -26,7 +26,7 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.GoogleAuthProvider;
 
-public class LoginActivity extends AppCompatActivity implements GoogleApiClient.OnConnectionFailedListener {
+public class GoogleLoginActivity extends AppCompatActivity implements GoogleApiClient.OnConnectionFailedListener {
     Button newPassButton;
     private static final int RC_SIGN_IN = 9001;
     private SignInButton signInButton;
@@ -49,14 +49,14 @@ public class LoginActivity extends AppCompatActivity implements GoogleApiClient.
                 .build();
 
         mGoogleApiClient = new GoogleApiClient.Builder(this)
-                .enableAutoManage(LoginActivity.this,this)
+                .enableAutoManage(GoogleLoginActivity.this,this)
                 .addApi(Auth.GOOGLE_SIGN_IN_API,gso)
                 .build();
 
         newPassButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getApplicationContext(), NewPassActivity.class));
+                startActivity(new Intent(getApplicationContext(), ForgetPasswordActivity.class));
             }
         });
 

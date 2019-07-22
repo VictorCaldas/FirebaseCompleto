@@ -17,7 +17,7 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 
-public class NewPassActivity extends AppCompatActivity {
+public class ForgetPasswordActivity extends AppCompatActivity {
     EditText email;
     Button btnNewPass;
     FirebaseAuth firebaseAuth;
