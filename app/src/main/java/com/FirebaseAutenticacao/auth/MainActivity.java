@@ -47,6 +47,7 @@ public class MainActivity extends AppCompatActivity {
         final FirebaseUser user  = firebaseAuth.getCurrentUser();
         textView.setText("bom dia amor " + user.getEmail());
 
+
         btnDeleteUser.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

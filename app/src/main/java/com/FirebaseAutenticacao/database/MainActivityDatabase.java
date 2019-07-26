@@ -8,15 +8,22 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.FirebaseAutenticacao.R;
+import com.FirebaseAutenticacao.auth.MainActivity;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.google.firebase.iid.FirebaseInstanceId;
+import com.google.firebase.iid.InstanceIdResult;
 
 
 public class MainActivityDatabase extends AppCompatActivity {
@@ -27,7 +34,6 @@ public class MainActivityDatabase extends AppCompatActivity {
     private Button btnSave;
     private DatabaseReference mFirebaseDatabase;
     private FirebaseDatabase mFirebaseInstance;
-
     private String userId;
 
     @Override
@@ -35,6 +41,22 @@ public class MainActivityDatabase extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_database);
 
+
+
+        FirebaseInstanceId.getInstance().getInstanceId()
+                .addOnCompleteListener(new OnCompleteListener<InstanceIdResult>() {
+                    @Override
+                    public void onComplete(@NonNull Task<InstanceIdResult> task) {
+                        if (!task.isSuccessful()) {
+                            Log.w(TAG, "getInstanceId failed", task.getException());
+                            return;
+                        }
+
+                        // Get new Instance ID token
+                        String token = task.getResult().getToken();
+
+                    }
+                });
 
         // Displaying toolbar icon
         getSupportActionBar().setDisplayShowHomeEnabled(true);
@@ -47,10 +69,8 @@ public class MainActivityDatabase extends AppCompatActivity {
 
 
         mFirebaseInstance = FirebaseDatabase.getInstance();
-
         // get reference to 'users' node
         mFirebaseDatabase = mFirebaseInstance.getReference("users");
-
         // Aqui meu jovens lindos!
         // store app title to 'app_title' node
         mFirebaseInstance.getReference("app_title").setValue("Tairo Lindo");

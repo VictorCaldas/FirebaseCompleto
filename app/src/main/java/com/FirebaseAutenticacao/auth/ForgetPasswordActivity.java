@@ -29,6 +29,7 @@ public class ForgetPasswordActivity extends AppCompatActivity {
         btnNewPass = (Button) findViewById(R.id.new_password_forgot);
 
         firebaseAuth = FirebaseAuth.getInstance();
+        //aqui ivan
 
         btnNewPass.setOnClickListener(new View.OnClickListener() {
             @Override
